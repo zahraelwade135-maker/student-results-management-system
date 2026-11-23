@@ -1,0 +1,149 @@
+/* إعدادات عامة */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f3f6fb;
+    color: #243247;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.page-header {
+    color: #ffffff;
+    background: linear-gradient(135deg, #183b63, #2876a8);
+    box-shadow: 0 4px 14px rgba(20, 48, 78, 0.15);
+}
+
+.page-header h1 {
+    font-weight: 700;
+}
+
+.page-header p {
+    color: #e6f1fa;
+}
+
+.app-card {
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(31, 55, 80, 0.07);
+}
+
+.section-title {
+    color: #183b63;
+    font-weight: 700;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #34465d;
+}
+
+.form-control {
+    min-height: 46px;
+    border-radius: 9px;
+}
+
+.form-control:focus {
+    border-color: #2876a8;
+    box-shadow: 0 0 0 0.2rem rgba(40, 118, 168, 0.15);
+}
+
+.btn {
+    min-height: 44px;
+    border-radius: 9px;
+    padding-inline: 22px;
+    font-weight: 600;
+}
+
+#errorBox {
+    border-radius: 10px;
+}
+
+.student-item,
+.report-item {
+    background-color: #f7faff;
+    border: 1px solid #e1eaf4;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+}
+
+.student-item:last-child,
+.report-item:last-child {
+    margin-bottom: 0;
+}
+
+.empty-message {
+    color: #758397;
+}
+
+.report-card {
+    border-top: 4px solid #198754;
+}
+
+.report-summary {
+    background: #edf8f1;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 15px;
+}
+
+footer {
+    color: #758397;
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .app-card .card-body {
+        padding: 1.2rem !important;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+/* ============================================
+   ألوان حالة الطالب: ناجح وراسب
+   ============================================ */
+
+.student-item,
+.report-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 14px;
+}
+
+/* الطالب الناجح: خلفية خضراء */
+.student-item.student-pass,
+.report-item.student-pass {
+    background-color: #d1e7dd;
+    border: 1px solid #198754;
+    color: #146c43;
+}
+
+/* الطالب الراسب: خلفية حمراء */
+.student-item.student-fail,
+.report-item.student-fail {
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+    color: #b02a37;
+}
+
+/* شارة كلمة ناجح أو راسب */
+.status-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.65);
+}
